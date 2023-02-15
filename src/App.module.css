@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20rem auto;
+  max-width: 100rem;
+  padding: 5rem;
+  border-radius: .5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 .2rem .8rem 0;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 1.6;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.timer-clock {
+  font-size: 3.4rem;
+  line-height: 1.2;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.controls button {
+  display: block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background .3s ease-in;
+}
+
+.controls button:hover {
+  background: #ddd;
+}
