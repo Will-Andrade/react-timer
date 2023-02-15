@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import TimerComponent from "./Timer.component";
 
 export default function TimerContainer() {
   const [timer, setTimer] = useState<number>(0);
   const [active, setActive] = useState<boolean>(false);
 
-  const startTimerHandler = () => {
+  const startTimerHandler = useCallback(() => {
     setActive(true);
-  };
+  }, [])
 
-  const stopTimerHandler = () => {
+  const stopTimerHandler = useCallback(() => {
     setActive(false);
-  };
+  }, []);
 
-  const resetTimerHandler = () => {
+  const resetTimerHandler = useCallback(() => {
     setActive(false);
     setTimer(0);
-  };
+  }, []);
 
   useEffect(() => {
     let intervalID: ReturnType<typeof setInterval> | undefined;
